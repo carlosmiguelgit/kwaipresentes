@@ -35,7 +35,7 @@ const Index = () => {
       <div 
         className="
           gifts flex gap-3 justify-center flex-wrap w-full max-w-[600px] 
-          my-2.5 mb-7.5 relative
+          my-2.5 mb-4 relative
         "
         id="giftList"
       >
@@ -49,7 +49,7 @@ const Index = () => {
       </div>
 
       {/* Footer */}
-      <footer className="text-xs text-[#777] text-center p-2.5 mt-auto">
+      <footer className="text-xs text-[#777] text-center p-2.5">
         © 2025 KWAI PRESENTES | TODOS OS DIREITOS RESERVADOS
       </footer>
 
