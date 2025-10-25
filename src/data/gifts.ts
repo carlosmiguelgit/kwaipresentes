@@ -38,7 +38,7 @@ export const gifts: Gift[] = [
     newPrice: 164.52,
     imageUrl: "https://i.ibb.co/wN2cSww7/alce.png",
     className: "alce",
-    message: "Você receberá R$2000 no pix",
+    message: "Você receberá R$2500 no pix",
   },
   {
     id: 4,
