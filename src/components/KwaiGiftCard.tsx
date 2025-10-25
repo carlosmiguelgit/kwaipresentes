@@ -22,7 +22,7 @@ const KwaiGiftCard: React.FC<KwaiGiftCardProps> = ({ gift, onSelect }) => {
   return (
     <div
       className="
-        bg-[#111] rounded-xl p-2 text-center w-[150px] h-[200px] 
+        bg-[#111] rounded-xl p-3 text-center w-[180px] h-[240px] 
         flex flex-col justify-end items-center cursor-pointer 
         transition-transform duration-300 hover:scale-[1.03]
         relative overflow-visible z-10
@@ -34,21 +34,21 @@ const KwaiGiftCard: React.FC<KwaiGiftCardProps> = ({ gift, onSelect }) => {
         <img 
           src={gift.imageUrl} 
           alt={gift.name} 
-          className={cn("w-[60px] h-[60px] object-contain transition-all duration-300", imageClasses)}
+          className={cn("w-[72px] h-[72px] object-contain transition-all duration-300", imageClasses)}
         />
       </div>
       
       {/* Texto do presente */}
-      <div className="gift-name font-semibold text-sm mb-1 whitespace-nowrap overflow-hidden text-ellipsis">{gift.name}</div>
-      <div className="gift-diamonds text-xs mb-1 text-[#0dfcfc]">💎 {gift.diamonds}</div>
+      <div className="gift-name font-semibold text-base mb-1 whitespace-nowrap overflow-hidden text-ellipsis">{gift.name}</div>
+      <div className="gift-diamonds text-sm mb-1 text-[#0dfcfc]">💎 {gift.diamonds}</div>
       
       <div className="gift-price flex flex-col items-center gap-1">
-        <span className="old-price text-sm font-semibold text-[#aaa]">
+        <span className="old-price text-base font-semibold text-[#aaa]">
           De R${gift.oldPrice.toFixed(2).replace('.', ',')}
         </span>
         <span 
           className="
-            new-price text-lg font-extrabold text-[#fc4d07] 
+            new-price text-xl font-extrabold text-[#fc4d07] 
             shadow-[0_0_8px_rgba(252,77,7,0.8)] 
             animate-pulse
           "
