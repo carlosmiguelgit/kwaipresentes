@@ -28,7 +28,7 @@ export const gifts: Gift[] = [
     newPrice: 105.00,
     imageUrl: "https://i.ibb.co/5g7XfXgC/Screenshot-2-removebg-preview.png",
     className: "second",
-    message: "Você receberá R$1000 no pix",
+    message: "Você receberá R$1500 no pix",
   },
   {
     id: 3,
@@ -38,7 +38,7 @@ export const gifts: Gift[] = [
     newPrice: 175.00,
     imageUrl: "https://i.ibb.co/wN2cSww7/alce.png",
     className: "alce",
-    message: "Você receberá R$2500 no pix",
+    message: "Você receberá R$2000 no pix",
   },
   {
     id: 4,
