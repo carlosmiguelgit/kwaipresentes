@@ -9,14 +9,15 @@ interface KwaiGiftCardProps {
 
 const KwaiGiftCard: React.FC<KwaiGiftCardProps> = ({ gift, onSelect }) => {
   // Mapeamento de classes de escala específicas para replicar o CSS original
+  // Ajustando as margens negativas para subir as imagens
   const imageScaleClasses: Record<string, string> = {
-    'arara': 'scale-[2.0] mt-0',
-    'second': 'scale-[1.0]',
-    'alce': 'scale-[1.4] -mt-4', // Ajustado de -mt-2.5 para -mt-4 para subir mais
-    'baleia': 'scale-[2.0] mt-2.5',
+    'arara': 'scale-[2.0] -mt-2', // Subindo um pouco
+    'second': 'scale-[1.0] -mt-2', // Subindo um pouco
+    'alce': 'scale-[1.4] -mt-6', // Subindo mais o Alce
+    'baleia': 'scale-[2.0] mt-0', // Ajustando a Baleia para não subir tanto, mantendo o visual
   };
 
-  const imageClasses = imageScaleClasses[gift.className] || 'scale-100';
+  const imageClasses = imageScaleClasses[gift.className] || 'scale-100 -mt-2';
 
   return (
     <div
@@ -28,7 +29,8 @@ const KwaiGiftCard: React.FC<KwaiGiftCardProps> = ({ gift, onSelect }) => {
       "
       onClick={() => onSelect(gift)}
     >
-      <div className="flex-grow flex items-center justify-center w-full h-full">
+      {/* Contêiner da Imagem: removendo h-full para que a imagem não force o centro absoluto */}
+      <div className="flex-grow flex items-center justify-center w-full">
         <img 
           src={gift.imageUrl} 
           alt={gift.name} 
