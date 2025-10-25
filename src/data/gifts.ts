@@ -18,7 +18,7 @@ export const gifts: Gift[] = [
     newPrice: 35.48,
     imageUrl: "https://i.ibb.co/gQRQ0BY/arara-removebg-preview.png",
     className: "arara",
-    message: "Você receberá R$1000 no pix",
+    message: "Você receberá R$500 no pix",
   },
   {
     id: 2,
@@ -28,7 +28,7 @@ export const gifts: Gift[] = [
     newPrice: 67.74,
     imageUrl: "https://i.ibb.co/5g7XfXgC/Screenshot-2-removebg-preview.png",
     className: "second",
-    message: "Você receberá R$2000 no pix",
+    message: "Você receberá R$1000 no pix",
   },
   {
     id: 3,
@@ -38,7 +38,7 @@ export const gifts: Gift[] = [
     newPrice: 164.52,
     imageUrl: "https://i.ibb.co/wN2cSww7/alce.png",
     className: "alce",
-    message: "Você receberá R$5000 no pix",
+    message: "Você receberá R$2000 no pix",
   },
   {
     id: 4,
@@ -48,6 +48,6 @@ export const gifts: Gift[] = [
     newPrice: 324.73,
     imageUrl: "https://i.ibb.co/hxWRGbKw/baleia.png",
     className: "baleia",
-    message: "Você receberá R$10000 no pix",
+    message: "Você receberá R$5000 no pix",
   },
 ];
