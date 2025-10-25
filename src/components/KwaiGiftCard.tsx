@@ -14,7 +14,7 @@ const KwaiGiftCard: React.FC<KwaiGiftCardProps> = ({ gift, onSelect }) => {
     'arara': 'scale-[2.0] -mt-2',
     'second': 'scale-[1.0] -mt-2',
     'alce': 'scale-[1.4] -mt-6',
-    'baleia': 'scale-[2.0] mt-0',
+    'baleia': 'scale-[2.0] -mt-2', // Alterado de mt-0 para -mt-2
   };
 
   const imageClasses = imageScaleClasses[gift.className] || 'scale-100 -mt-2';
@@ -39,11 +39,9 @@ const KwaiGiftCard: React.FC<KwaiGiftCardProps> = ({ gift, onSelect }) => {
       </div>
       
       {/* Texto do presente */}
-      {/* Aumentando mb-0.5 para mb-1 */}
       <div className="gift-name font-semibold text-sm mb-1 whitespace-nowrap overflow-hidden text-ellipsis">{gift.name}</div>
       <div className="gift-diamonds text-xs mb-1 text-[#0dfcfc]">💎 {gift.diamonds}</div>
       
-      {/* Aumentando gap-0.5 para gap-1 */}
       <div className="gift-price flex flex-col items-center gap-1">
         <span className="old-price text-sm font-semibold text-[#aaa]">
           De R${gift.oldPrice.toFixed(2).replace('.', ',')}

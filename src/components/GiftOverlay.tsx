@@ -18,7 +18,7 @@ const GiftOverlay: React.FC<GiftOverlayProps> = ({ selectedGift, onClose }) => {
     'arara': 'scale-[2.0] -mt-2', // Subindo um pouco
     'second': 'scale-[1.0] -mt-2', // Subindo um pouco
     'alce': 'scale-[1.4] -mt-6', // Subindo mais o Alce
-    'baleia': 'scale-[2.0] mt-0', // Ajustando a Baleia para não subir tanto, mantendo o visual
+    'baleia': 'scale-[2.0] -mt-2', // Alterado de mt-0 para -mt-2
   };
 
   const imageClasses = imageScaleClasses[selectedGift.className] || 'scale-100 -mt-2';
