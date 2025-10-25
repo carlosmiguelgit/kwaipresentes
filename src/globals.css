@@ -96,6 +96,18 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    /* Garantindo que o fundo do body seja preto para o efeito de tela cheia */
+    @apply bg-black text-foreground;
   }
+}
+
+/* Definição da animação pulse no CSS global */
+@keyframes pulse {
+  0% { transform: scale(1); text-shadow: 0 0 8px rgba(252,77,7,0.8); }
+  50% { transform: scale(1.05); text-shadow: 0 0 18px rgba(252,77,7,1); }
+  100% { transform: scale(1); text-shadow: 0 0 8px rgba(252,77,7,0.8); }
+}
+
+.animate-pulse {
+  animation: pulse 1s infinite;
 }
