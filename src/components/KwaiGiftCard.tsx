@@ -14,7 +14,7 @@ const KwaiGiftCard: React.FC<KwaiGiftCardProps> = ({ gift, onSelect }) => {
     'arara': 'scale-[2.0] -mt-2',
     'second': 'scale-[1.0] -mt-2',
     'alce': 'scale-[1.4] -mt-6',
-    'baleia': 'scale-[2.0] -mt-2', // Alterado de mt-0 para -mt-2
+    'baleia': 'scale-[2.0] -mt-2',
   };
 
   const imageClasses = imageScaleClasses[gift.className] || 'scale-100 -mt-2';
@@ -22,7 +22,7 @@ const KwaiGiftCard: React.FC<KwaiGiftCardProps> = ({ gift, onSelect }) => {
   return (
     <div
       className="
-        bg-[#111] rounded-xl p-2 text-center w-[100px] h-[190px] 
+        bg-[#111] rounded-xl p-2 text-center w-[150px] h-[200px] 
         flex flex-col justify-end items-center cursor-pointer 
         transition-transform duration-300 hover:scale-[1.03]
         relative overflow-visible z-10

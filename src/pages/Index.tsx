@@ -3,6 +3,7 @@ import { MadeWithDyad } from "@/components/made-with-dyad";
 import KwaiGiftCard from '@/components/KwaiGiftCard';
 import { gifts, Gift } from '@/data/gifts';
 import GiftOverlay from '@/components/GiftOverlay';
+import LinkPrefetcher from '@/components/LinkPrefetcher';
 
 const Index = () => {
   const [selectedGift, setSelectedGift] = useState<Gift | null>(null);
@@ -14,10 +15,16 @@ const Index = () => {
   const handleCloseOverlay = () => {
     setSelectedGift(null);
   };
+  
+  // Extrai todas as URLs de compra para pré-carregamento
+  const purchaseUrls = gifts.map(gift => gift.purchaseUrl);
 
   return (
     <div className="min-h-screen flex flex-col items-center bg-black text-white p-4">
       
+      {/* Pré-carregamento dos links de pagamento */}
+      <LinkPrefetcher urls={purchaseUrls} />
+
       {/* Contêiner principal que cresce para centralizar o conteúdo */}
       <div className="flex flex-col items-center justify-center flex-grow w-full">
         
@@ -34,11 +41,11 @@ const Index = () => {
           </h1>
         </div>
 
-        {/* Lista de Presentes */}
+        {/* Lista de Presentes: Grid 2x2 com espaçamento apertado */}
         <div 
           className="
-            gifts grid grid-cols-2 gap-3 justify-items-center w-full max-w-[600px] 
-            my-2.5 mb-4 relative sm:flex sm:flex-wrap sm:justify-center
+            gifts grid grid-cols-2 gap-2 justify-items-center w-full max-w-[450px] 
+            my-2.5 mb-4 relative
           "
           id="giftList"
         >
