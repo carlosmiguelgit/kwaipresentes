@@ -27,7 +27,7 @@ const Index = () => {
           <h1 
             className="
               text-2xl font-extrabold uppercase text-[#fc4d07] 
-              shadow-[0_0_10px_rgba(252,77,7,0.6)] tracking-wider
+              tracking-wider
             "
           >
             KWAI PRESENTES
