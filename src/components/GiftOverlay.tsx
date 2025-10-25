@@ -25,10 +25,8 @@ const GiftOverlay: React.FC<GiftOverlayProps> = ({ selectedGift, onClose }) => {
 
   const handlePurchase = () => {
     if (selectedGift?.purchaseUrl) {
-      // Abre a URL de compra em uma nova aba (_blank)
-      window.open(selectedGift.purchaseUrl, '_blank');
-      // Opcional: Fechar o modal após o clique
-      onClose(); 
+      // Redireciona o usuário na mesma aba/tela
+      window.location.href = selectedGift.purchaseUrl;
     }
   };
 
