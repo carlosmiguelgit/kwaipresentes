@@ -12,7 +12,7 @@ const KwaiGiftCard: React.FC<KwaiGiftCardProps> = ({ gift, onSelect }) => {
   const imageScaleClasses: Record<string, string> = {
     'arara': 'scale-[2.0] mt-0',
     'second': 'scale-[1.0]',
-    'alce': 'scale-[1.4] -mt-2.5',
+    'alce': 'scale-[1.4] -mt-4', // Ajustado de -mt-2.5 para -mt-4 para subir mais
     'baleia': 'scale-[2.0] mt-2.5',
   };
 
@@ -36,7 +36,8 @@ const KwaiGiftCard: React.FC<KwaiGiftCardProps> = ({ gift, onSelect }) => {
         />
       </div>
       
-      <div className="gift-name font-semibold text-sm mb-0.5">{gift.name}</div>
+      {/* Adicionando whitespace-nowrap para tentar manter o nome em uma linha, se possível */}
+      <div className="gift-name font-semibold text-sm mb-0.5 whitespace-nowrap overflow-hidden text-ellipsis">{gift.name}</div>
       <div className="gift-diamonds text-xs mb-1 text-[#0dfcfc]">💎 {gift.diamonds}</div>
       
       <div className="gift-price flex flex-col items-center gap-0.5">
