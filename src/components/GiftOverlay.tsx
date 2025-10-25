@@ -47,7 +47,8 @@ const GiftOverlay: React.FC<GiftOverlayProps> = ({ selectedGift, onClose }) => {
               />
             </div>
 
-            <div className="gift-name font-semibold text-lg mb-0.5">{selectedGift.name}</div>
+            {/* Adicionando text-white aqui */}
+            <div className="gift-name font-semibold text-lg mb-0.5 text-white">{selectedGift.name}</div>
             <div className="gift-diamonds text-base mb-1 text-[#0dfcfc]">💎 {selectedGift.diamonds}</div>
             
             <div className="gift-price flex flex-col items-center gap-0.5 mb-4">
