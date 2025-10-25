@@ -23,6 +23,12 @@ const GiftOverlay: React.FC<GiftOverlayProps> = ({ selectedGift, onClose }) => {
 
   const imageClasses = imageScaleClasses[selectedGift.className] || 'scale-100 -mt-2';
 
+  const handlePurchase = () => {
+    if (selectedGift?.purchaseUrl) {
+      window.location.href = selectedGift.purchaseUrl;
+    }
+  };
+
   return (
     <Dialog open={!!selectedGift} onOpenChange={onClose}>
       <DialogContent className="sm:max-w-[425px] bg-transparent border-none p-0">
@@ -72,7 +78,7 @@ const GiftOverlay: React.FC<GiftOverlayProps> = ({ selectedGift, onClose }) => {
                 hover:bg-[#ff9800]/90 transition-transform duration-200 
                 hover:scale-[1.05]
               "
-              onClick={() => alert(`Comprando ${selectedGift.name}`)}
+              onClick={handlePurchase}
             >
               COMPRAR
             </Button>

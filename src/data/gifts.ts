@@ -7,6 +7,7 @@ export interface Gift {
   imageUrl: string;
   className: string;
   message: string;
+  purchaseUrl: string; // Novo campo adicionado
 }
 
 export const gifts: Gift[] = [
@@ -19,6 +20,7 @@ export const gifts: Gift[] = [
     imageUrl: "https://i.ibb.co/gQRQ0BY/arara-removebg-preview.png",
     className: "arara",
     message: "Você receberá R$500 no pix",
+    purchaseUrl: "https://go.ironpayapp.com.br/xasv9sxvwc",
   },
   {
     id: 2,
@@ -29,6 +31,7 @@ export const gifts: Gift[] = [
     imageUrl: "https://i.ibb.co/5g7XfXgC/Screenshot-2-removebg-preview.png",
     className: "second",
     message: "Você receberá R$1000 no pix",
+    purchaseUrl: "https://go.ironpayapp.com.br/zd5tg",
   },
   {
     id: 3,
@@ -39,6 +42,7 @@ export const gifts: Gift[] = [
     imageUrl: "https://i.ibb.co/wN2cSww7/alce.png",
     className: "alce",
     message: "Você receberá R$2500 no pix",
+    purchaseUrl: "https://go.ironpayapp.com.br/xzvjm",
   },
   {
     id: 4,
@@ -49,5 +53,6 @@ export const gifts: Gift[] = [
     imageUrl: "https://i.ibb.co/hxWRGbKw/baleia.png",
     className: "baleia",
     message: "Você receberá R$5000 no pix",
+    purchaseUrl: "https://go.ironpayapp.com.br/ma9xy",
   },
 ];
