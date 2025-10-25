@@ -11,10 +11,10 @@ const KwaiGiftCard: React.FC<KwaiGiftCardProps> = ({ gift, onSelect }) => {
   // Mapeamento de classes de escala específicas para replicar o CSS original
   // Ajustando as margens negativas para subir as imagens
   const imageScaleClasses: Record<string, string> = {
-    'arara': 'scale-[2.0] -mt-2', // Subindo um pouco
-    'second': 'scale-[1.0] -mt-2', // Subindo um pouco
-    'alce': 'scale-[1.4] -mt-6', // Subindo mais o Alce
-    'baleia': 'scale-[2.0] mt-0', // Ajustando a Baleia para não subir tanto, mantendo o visual
+    'arara': 'scale-[2.0] -mt-2',
+    'second': 'scale-[1.0] -mt-2',
+    'alce': 'scale-[1.4] -mt-6',
+    'baleia': 'scale-[2.0] mt-0',
   };
 
   const imageClasses = imageScaleClasses[gift.className] || 'scale-100 -mt-2';
@@ -22,14 +22,14 @@ const KwaiGiftCard: React.FC<KwaiGiftCardProps> = ({ gift, onSelect }) => {
   return (
     <div
       className="
-        bg-[#111] rounded-xl p-2 text-center w-[100px] h-[180px] 
+        bg-[#111] rounded-xl p-2 text-center w-[100px] h-[190px] 
         flex flex-col justify-end items-center cursor-pointer 
         transition-transform duration-300 hover:scale-[1.03]
         relative overflow-visible z-10
       "
       onClick={() => onSelect(gift)}
     >
-      {/* Contêiner da Imagem: removendo h-full para que a imagem não force o centro absoluto */}
+      {/* Contêiner da Imagem */}
       <div className="flex-grow flex items-center justify-center w-full">
         <img 
           src={gift.imageUrl} 
@@ -38,7 +38,7 @@ const KwaiGiftCard: React.FC<KwaiGiftCardProps> = ({ gift, onSelect }) => {
         />
       </div>
       
-      {/* Adicionando whitespace-nowrap para tentar manter o nome em uma linha, se possível */}
+      {/* Texto do presente */}
       <div className="gift-name font-semibold text-sm mb-0.5 whitespace-nowrap overflow-hidden text-ellipsis">{gift.name}</div>
       <div className="gift-diamonds text-xs mb-1 text-[#0dfcfc]">💎 {gift.diamonds}</div>
       
