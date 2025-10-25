@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { MadeWithDyad } from "@/components/made-with-dyad";
 import KwaiGiftCard from '@/components/KwaiGiftCard';
-import GiftOverlay from '@/components/GiftOverlay';
 import { gifts, Gift } from '@/data/gifts';
+import GiftOverlay from '@/components/GiftOverlay';
 
 const Index = () => {
   const [selectedGift, setSelectedGift] = useState<Gift | null>(null);
@@ -37,8 +37,8 @@ const Index = () => {
         {/* Lista de Presentes */}
         <div 
           className="
-            gifts flex gap-3 justify-center flex-wrap w-full max-w-[600px] 
-            my-2.5 mb-4 relative
+            gifts grid grid-cols-2 gap-3 justify-items-center w-full max-w-[600px] 
+            my-2.5 mb-4 relative sm:flex sm:flex-wrap sm:justify-center
           "
           id="giftList"
         >
