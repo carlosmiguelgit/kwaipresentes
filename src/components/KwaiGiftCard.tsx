@@ -39,10 +39,12 @@ const KwaiGiftCard: React.FC<KwaiGiftCardProps> = ({ gift, onSelect }) => {
       </div>
       
       {/* Texto do presente */}
-      <div className="gift-name font-semibold text-sm mb-0.5 whitespace-nowrap overflow-hidden text-ellipsis">{gift.name}</div>
+      {/* Aumentando mb-0.5 para mb-1 */}
+      <div className="gift-name font-semibold text-sm mb-1 whitespace-nowrap overflow-hidden text-ellipsis">{gift.name}</div>
       <div className="gift-diamonds text-xs mb-1 text-[#0dfcfc]">💎 {gift.diamonds}</div>
       
-      <div className="gift-price flex flex-col items-center gap-0.5">
+      {/* Aumentando gap-0.5 para gap-1 */}
+      <div className="gift-price flex flex-col items-center gap-1">
         <span className="old-price text-sm font-semibold text-[#aaa]">
           De R${gift.oldPrice.toFixed(2).replace('.', ',')}
         </span>
